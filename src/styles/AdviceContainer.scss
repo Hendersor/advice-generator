@@ -4,6 +4,9 @@
   background-color: global.$darkGrayishBlue;
   height: 350px;
   width: 90%;
+  min-width: 380px;
+  max-width: 520px;
+
   margin: 0 auto;
   border-radius: 15px;
   font-family: "Manrope", sans-serif;
@@ -28,6 +31,21 @@
       color: global.$lightCyan;
       font-size: 2.3rem;
       text-align: center;
+      animation: displayed 2s;
+    }
+
+    @keyframes displayed {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
   }
 
@@ -45,12 +63,27 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
+      cursor: pointer;
       bottom: -50px;
       position: absolute;
+
       img {
         width: 25px;
         height: 25px;
+      }
+    }
+
+    .figureContainer:hover {
+      img {
+        animation: bigger 2s infinite;
+      }
+    }
+    @keyframes bigger {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
       }
     }
   }

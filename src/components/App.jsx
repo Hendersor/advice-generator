@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
 import "../styles/global.scss";
+import "../styles/DesktopAdviceContainer.scss"
 import { AdviceContainer } from "./AdviceContainer";
 import { fetchData } from "../utils/APIconection";
 const App = () => {
   const API = "https://api.adviceslip.com/advice";
+  // El estado del consejo y del id
   const [advice, setAdvice] = useState("");
+  const [idAdvice, setIdAdvice] = useState("123");
   // useEffect se usa para que justo despues de cargar los elementos
   // haga la conexion a la API.
   useEffect(() => {
     const getAdvice = async () => {
       const data = await fetchData(API);
       const adviceFinal = data.slip.advice;
+      setIdAdvice(data.slip.id);
       setAdvice(adviceFinal);
     };
     getAdvice();
@@ -22,13 +26,18 @@ const App = () => {
   const generateAdvice = async () => {
     const data = await fetchData(API);
     const adviceFinal = data.slip.advice;
+    setIdAdvice(data.slip.id);
     setAdvice(adviceFinal);
   };
 
   // Pagina principal con los props para rendirerizar la informacion.
   return (
     <main className="main">
-      <AdviceContainer advice={advice} generateAdvice={generateAdvice} />
+      <AdviceContainer
+        advice={advice}
+        generateAdvice={generateAdvice}
+        id={idAdvice}
+      />
     </main>
   );
 };
