@@ -10,9 +10,6 @@ module.exports = {
   },
   mode: "development",
   resolve: {
-    alias: {
-      "@utils": path.resolve(__dirname, "src/utils"),
-    },
     extensions: [".js", ".jsx"],
   },
   module: {

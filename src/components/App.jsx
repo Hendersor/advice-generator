@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/global.scss";
 import "../styles/DesktopAdviceContainer.scss";
 import { AdviceContainer } from "./AdviceContainer";
-import { fetchData } from "../utils/APIconection";
-import APIconection from "@utils/APIconection";
+import { fetchData } from "../APIconection";
 const App = () => {
   const API = "https://api.adviceslip.com/advice";
   // El estado del consejo y del id
