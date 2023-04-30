@@ -1,4 +1,25 @@
 # Advice generator
+
+### English
+### What is it and how is it built?
+It is a small component that generates a random advice fetched from an API. This was my first approach to the React library, so I used JavaScript and JSX. I added a small animation to start working with keyframes and to be able to use more complex animations in future projects. I also made some extra and different configurations to the Webpack file.
+
+- JSX
+- Javascript
+- Hooks
+- Webpack
+
+### What did I learn and what challenges did I face?
+I started to get familiar with JSX for creating components and passing information through them to receive them as props. I also used useState to change the phrase sent by the API, and useEffect for API connection. I tried to follow best practices to make it more readable and understandable. Although the project is small, I separated the API connection file and the component file. I used destructuring for props and commented the code.
+
+The project allowed me to
+- Practice animations and keyframes.
+- Understand how some of the Hooks work.
+- Understand how components are built through JSX.
+- Understand the importance of organizing files and code properly to have a more sustainable and maintainable project.
+![advice generator image](https://res.cloudinary.com/dwdz4mn27/image/upload/v1682658682/AdivcePortfolio_klngff.png)
+
+### Español
 ### ¿Qué es y como esta construido?
 Es un pequeno componente que genera un consejo aleatorio traido de una API.
 Este fue mi primer asercamiento a la libreria de React, por lo que use Javascript y JSX.
@@ -9,6 +30,7 @@ Tambien una configuracion extra y diferente al archivo de Webpack
 - Javascript
 - Hooks
 - Webpack
+
 
 ### ¿Qué aprendi y que desafios me enfrente?
 Me empeze a familiarizar con JSX para la creacion de componentes y el mandar informacion
